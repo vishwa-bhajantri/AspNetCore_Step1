@@ -6,6 +6,8 @@ builder.Services.AddOpenApi(); //create the Documentation for the API
 
 builder.Services.AddEndpointsApiExplorer(); // Add this line to enable API explorer for endpoints
 
+builder.Services.AddControllers(); // Add this line to enable controller support
+
 var app = builder.Build();
 
 if (app.Environment.IsDevelopment())
@@ -119,9 +121,11 @@ app.MapDelete("/DeleteEmployee/{location}", (string location) =>
     return employeesData;
 });
 
+app.MapControllers();
+
 app.Run();
 
-class Employee
+public class Employee
 {
     public int Id { get; set; }
     public string Name { get; set; }
