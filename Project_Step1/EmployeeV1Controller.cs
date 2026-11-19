@@ -5,10 +5,10 @@ namespace Project_Step1
 
     [ApiController]
     [Route("api/[Controller]")]
-    public class EmployeeController : ControllerBase
+    public class EmployeeV1Controller : ControllerBase
     {
 
-        public EmployeeController()
+        public EmployeeV1Controller()
         {
 
         }
